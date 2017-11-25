@@ -17,6 +17,7 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -103,6 +104,7 @@ public class login extends javax.swing.JFrame {
         options op = new options();
         op.setData(email.getText(),password.getText());
         op.show();
+        this.dispose();
         
     }//GEN-LAST:event_jButton3ActionPerformed
 

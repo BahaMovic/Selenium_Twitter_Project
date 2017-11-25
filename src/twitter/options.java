@@ -5,6 +5,10 @@
  */
 package twitter;
 
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -19,6 +23,7 @@ public class options extends javax.swing.JFrame {
      */
     public options() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -30,9 +35,9 @@ public class options extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox1 = new javax.swing.JComboBox<>();
+        comLink = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        link = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -42,13 +47,13 @@ public class options extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("برنامج نابع تويتر");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comLink.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "الأشخاص الذين يتابعون سلطانھ ⁶⁰⁰ᵏ (@Q1s1Q) | تويتر", "الأشخاص الذين يتابعون ᷂حلوى ᷂القطن 🇸🇦1ᵐ (@7lw__) | تويتر", "الأشخاص الذين يتابعون ࿐ابـن واايــل࿐ (@zrrrm) | تويتر", "الأشخاص الذين يتابعون فهد الصقعبي 🇸🇦 (@fssl1999) | تويتر", "الأشخاص الذين يتابعون ᎷᎪYᏆᎠ (@_MMll_) | تويتر", "الأشخاص الذين يتابعون تفاصيل شرقي (@qalcc) | تويتر", "الأشخاص الذين يتابعون ‏ ‏فــھــد♡ ♔✰ ¹ᴹ ࿐ (@p22__) | تويتر", "الأشخاص الذين يتابعون ‏ﺂﻟﭴۆھَہّړُھَہ³⁵⁰ᴷ (@_jo_18) | تويتر", "الأشخاص الذين يتابعون ‏مشاعر 1Ꮇ❗️ (@08a) | تويتر", "الأشخاص الذين يتابعون عقد خروج🚫 (@__bc1) | تويتر", "الأشخاص الذين يتابعون انثى من خيال (@Hs___5) | تويتر", "الأشخاص الذين يتابعون العـαℓαтнвـذب (@3thb511) | تويتر", "الأشخاص الذين يتابعون ‏اناقة حرف 🙋‍♂️💙 (@maz___1) | تويتر", "الأشخاص الذين يتابعون ♡sʜoooq💙🎼 (@shOOOq_M) | تويتر", "الأشخاص الذين يتابعون *✒الحر الأشقر*✒ فارس (@Ashger_70R) | تويتر", "الأشخاص الذين يتابعون فالح الظفيري 🇰🇼 (@Faleh_HD) | تويتر", "الأشخاص الذين يتابعون .nour. 🏇🏻 (@loura_3) | تويتر", "الأشخاص الذين يتابعون مُجَرَّد مشآعر (@Bas330) | تويتر", "الأشخاص الذين يتابعون شمالي رايق ‏²⁰⁰ᴷ (@Shmaliie) | تويتر", "الأشخاص الذين يتابعون #مساعد .. 🇰🇼 (@B88R_) | تويتر", "الأشخاص الذين يتابعون ‏مروان الوصابي₁Ꮇ (@K800_) | تويتر", "الأشخاص الذين يتابعون ᎷᎪYᏆᎠ (@_Mayid_) | تويتر" }));
 
         jLabel1.setText("الصفحة :");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        link.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                linkActionPerformed(evt);
             }
         });
 
@@ -85,8 +90,8 @@ public class options extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(135, 135, 135)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(jComboBox1, 0, 437, Short.MAX_VALUE)
+                            .addComponent(link)
+                            .addComponent(comLink, 0, 437, Short.MAX_VALUE)
                             .addComponent(jTextField2))
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -105,11 +110,11 @@ public class options extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comLink, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(link, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -125,21 +130,65 @@ public class options extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void linkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_linkActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_linkActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
+    public void delay(int n)
+    {
+        try {
+            TimeUnit.SECONDS.sleep(n);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(options.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        WebDriver open = new ChromeDriver();
+       WebDriver open = new ChromeDriver();
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
-        
         open.get("https://mobile.twitter.com/login");
+        this.delay(5);
+        open.findElement(By.name("session[username_or_email]")).sendKeys(this.Email);
+        open.findElement(By.name("session[password]")).sendKeys(this.Password);
+        this.delay(1);
+        open.findElement(By.name("session[password]")).submit();
+        
+        
+        if(link.getText().equals("") || link.getText().equals(null))
+       {
+            String arr[] = new String[22];
+            arr[0] = "https://twitter.com/Q1s1Q/followers";
+            arr[1] = "https://twitter.com/7lw__/followers"; 
+            arr[2] = "https://twitter.com/zrrrm/followers";
+            arr[3] = "https://twitter.com/fssl1999/followers";
+            arr[4] = "https://twitter.com/_MMll_/followers"; 
+            arr[5] = "https://twitter.com/qalcc/followers";
+            arr[6] = "https://twitter.com/p22__/followers";
+            arr[7] = "https://twitter.com/_jo_18/followers";
+            arr[8] = "https://twitter.com/08a/followers";
+            arr[9] = "https://twitter.com/__bc1/followers";
+            arr[10] = "https://twitter.com/Hs___5/followers";
+            arr[11] = "https://twitter.com/3thb511/followers";
+            arr[12] = "https://twitter.com/maz___1/followers";
+            arr[13] = "https://twitter.com/shOOOq_M/followers";
+            arr[14] = "https://twitter.com/Ashger_70R/followers";
+            arr[15] = "https://twitter.com/Faleh_HD/followers";
+            arr[16] = "https://twitter.com/loura_3/followers";
+            arr[17] = "https://twitter.com/Bas330/followers";
+            arr[18] = "https://twitter.com/Shmaliie/followers";
+            arr[19] = "https://twitter.com/B88R_/followers";
+            arr[20] = "https://twitter.com/K800_/followers";
+            arr[21] = "https://twitter.com/_Mayid_/followers";
+            open.get(arr[comLink.getSelectedIndex()]);
+       }
+       else{
+            //System.out.println("Hello world text link");
+            open.get(link.getText());
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -188,14 +237,14 @@ public class options extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> comLink;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField link;
     // End of variables declaration//GEN-END:variables
     private String Email;
     private String Password;

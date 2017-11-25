@@ -29,8 +29,8 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jTextField1" max="32767" attributes="0"/>
-                          <Component id="jComboBox1" pref="437" max="32767" attributes="0"/>
+                          <Component id="link" max="32767" attributes="0"/>
+                          <Component id="comLink" pref="437" max="32767" attributes="0"/>
                           <Component id="jTextField2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
@@ -56,12 +56,12 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jComboBox1" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="comLink" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField1" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                  <Component id="link" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
@@ -80,14 +80,32 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="comLink">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="22">
+            <StringItem index="0" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x633;&#x644;&#x637;&#x627;&#x646;&#x6be; &#x2076;&#x2070;&#x2070;&#x1d4f; (@Q1s1Q) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="1" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x1dc2;&#x62d;&#x644;&#x648;&#x649; &#x1dc2;&#x627;&#x644;&#x642;&#x637;&#x646; &#xd83c;&#xddf8;&#xd83c;&#xdde6;1&#x1d50; (@7lw__) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="2" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#xfd0;&#x627;&#x628;&#x640;&#x646; &#x648;&#x627;&#x627;&#x64a;&#x640;&#x640;&#x644;&#xfd0; (@zrrrm) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="3" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x641;&#x647;&#x62f; &#x627;&#x644;&#x635;&#x642;&#x639;&#x628;&#x64a; &#xd83c;&#xddf8;&#xd83c;&#xdde6; (@fssl1999) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="4" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x13b7;&#x13aa;Y&#x13c6;&#x13a0; (@_MMll_) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="5" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x62a;&#x641;&#x627;&#x635;&#x64a;&#x644; &#x634;&#x631;&#x642;&#x64a; (@qalcc) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="6" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x200f; &#x200f;&#x641;&#x640;&#x640;&#x6be;&#x640;&#x640;&#x62f;&#x2661; &#x2654;&#x2730; &#xb9;&#x1d39; &#xfd0; (@p22__) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="7" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x200f;&#xfe82;&#xfedf;&#xfb74;&#x6c6;&#x6be;&#x64e;&#x6c1;&#x651;&#x693;&#x64f;&#x6be;&#x64e;&#x6c1;&#xb3;&#x2075;&#x2070;&#x1d37; (@_jo_18) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="8" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x200f;&#x645;&#x634;&#x627;&#x639;&#x631; 1&#x13b7;&#x2757;&#xfe0f; (@08a) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="9" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x639;&#x642;&#x62f; &#x62e;&#x631;&#x648;&#x62c;&#xd83d;&#xdeab; (@__bc1) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="10" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x627;&#x646;&#x62b;&#x649; &#x645;&#x646; &#x62e;&#x64a;&#x627;&#x644; (@Hs___5) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="11" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x627;&#x644;&#x639;&#x640;&#x3b1;&#x2113;&#x3b1;&#x442;&#x43d;&#x432;&#x640;&#x630;&#x628; (@3thb511) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="12" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x200f;&#x627;&#x646;&#x627;&#x642;&#x629; &#x62d;&#x631;&#x641; &#xd83d;&#xde4b;&#x200d;&#x2642;&#xfe0f;&#xd83d;&#xdc99; (@maz___1) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="13" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x2661;s&#x29c;oooq&#xd83d;&#xdc99;&#xd83c;&#xdfbc; (@shOOOq_M) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="14" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; *&#x2712;&#x627;&#x644;&#x62d;&#x631; &#x627;&#x644;&#x623;&#x634;&#x642;&#x631;*&#x2712; &#x641;&#x627;&#x631;&#x633; (@Ashger_70R) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="15" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x641;&#x627;&#x644;&#x62d; &#x627;&#x644;&#x638;&#x641;&#x64a;&#x631;&#x64a; &#xd83c;&#xddf0;&#xd83c;&#xddfc; (@Faleh_HD) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="16" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; .nour. &#xd83c;&#xdfc7;&#xd83c;&#xdffb; (@loura_3) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="17" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x645;&#x64f;&#x62c;&#x64e;&#x631;&#x64e;&#x651;&#x62f; &#x645;&#x634;&#x622;&#x639;&#x631; (@Bas330) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="18" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x634;&#x645;&#x627;&#x644;&#x64a; &#x631;&#x627;&#x64a;&#x642; &#x200f;&#xb2;&#x2070;&#x2070;&#x1d37; (@Shmaliie) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="19" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; #&#x645;&#x633;&#x627;&#x639;&#x62f; .. &#xd83c;&#xddf0;&#xd83c;&#xddfc; (@B88R_) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="20" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x200f;&#x645;&#x631;&#x648;&#x627;&#x646; &#x627;&#x644;&#x648;&#x635;&#x627;&#x628;&#x64a;&#x2081;&#x13b7; (@K800_) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
+            <StringItem index="21" value="&#x627;&#x644;&#x623;&#x634;&#x62e;&#x627;&#x635; &#x627;&#x644;&#x630;&#x64a;&#x646; &#x64a;&#x62a;&#x627;&#x628;&#x639;&#x648;&#x646; &#x13b7;&#x13aa;Y&#x13c6;&#x13a0; (@_Mayid_) | &#x62a;&#x648;&#x64a;&#x62a;&#x631;"/>
           </StringArray>
         </Property>
       </Properties>
@@ -100,9 +118,9 @@
         <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x635;&#x641;&#x62d;&#x629; :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="link">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="linkActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
