@@ -5,12 +5,18 @@
  */
 package twitter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
@@ -151,7 +157,7 @@ public class options extends javax.swing.JFrame {
        WebDriver open = new ChromeDriver();
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
         open.get("https://mobile.twitter.com/login");
-        this.delay(5);
+        this.delay(2);
         open.findElement(By.name("session[username_or_email]")).sendKeys(this.Email);
         open.findElement(By.name("session[password]")).sendKeys(this.Password);
         this.delay(1);
@@ -161,29 +167,30 @@ public class options extends javax.swing.JFrame {
         if(link.getText().equals("") || link.getText().equals(null))
        {
             String arr[] = new String[22];
-            arr[0] = "https://twitter.com/Q1s1Q/followers";
-            arr[1] = "https://twitter.com/7lw__/followers"; 
-            arr[2] = "https://twitter.com/zrrrm/followers";
-            arr[3] = "https://twitter.com/fssl1999/followers";
-            arr[4] = "https://twitter.com/_MMll_/followers"; 
-            arr[5] = "https://twitter.com/qalcc/followers";
-            arr[6] = "https://twitter.com/p22__/followers";
-            arr[7] = "https://twitter.com/_jo_18/followers";
-            arr[8] = "https://twitter.com/08a/followers";
-            arr[9] = "https://twitter.com/__bc1/followers";
-            arr[10] = "https://twitter.com/Hs___5/followers";
-            arr[11] = "https://twitter.com/3thb511/followers";
-            arr[12] = "https://twitter.com/maz___1/followers";
-            arr[13] = "https://twitter.com/shOOOq_M/followers";
-            arr[14] = "https://twitter.com/Ashger_70R/followers";
-            arr[15] = "https://twitter.com/Faleh_HD/followers";
-            arr[16] = "https://twitter.com/loura_3/followers";
-            arr[17] = "https://twitter.com/Bas330/followers";
-            arr[18] = "https://twitter.com/Shmaliie/followers";
-            arr[19] = "https://twitter.com/B88R_/followers";
-            arr[20] = "https://twitter.com/K800_/followers";
-            arr[21] = "https://twitter.com/_Mayid_/followers";
+            arr[0] = "https://mobile.twitter.com/Q1s1Q/followers";
+            arr[1] = "https://mobile.twitter.com/7lw__/followers"; 
+            arr[2] = "https://mobile.twitter.com/zrrrm/followers";
+            arr[3] = "https://mobile.twitter.com/fssl1999/followers";
+            arr[4] = "https://mobile.twitter.com/_MMll_/followers"; 
+            arr[5] = "https://mobile.twitter.com/qalcc/followers";
+            arr[6] = "https://mobile.twitter.com/p22__/followers";
+            arr[7] = "https://mobile.twitter.com/_jo_18/followers";
+            arr[8] = "https://mobile.twitter.com/08a/followers";
+            arr[9] = "https://mobile.twitter.com/__bc1/followers";
+            arr[10] = "https://mobile.twitter.com/Hs___5/followers";
+            arr[11] = "https://mobile.twitter.com/3thb511/followers";
+            arr[12] = "https://mobile.twitter.com/maz___1/followers";
+            arr[13] = "https://mobile.twitter.com/shOOOq_M/followers";
+            arr[14] = "https://mobile.twitter.com/Ashger_70R/followers";
+            arr[15] = "https://mobile.twitter.com/Faleh_HD/followers";
+            arr[16] = "https://mobile.twitter.com/loura_3/followers";
+            arr[17] = "https://mobile.twitter.com/Bas330/followers";
+            arr[18] = "https://mobile.twitter.com/Shmaliie/followers";
+            arr[19] = "https://mobile.twitter.com/B88R_/followers";
+            arr[20] = "https://mobile.twitter.com/K800_/followers";
+            arr[21] = "https://mobile.twitter.com/_Mayid_/followers";
             open.get(arr[comLink.getSelectedIndex()]);
+            this.Follow(open);
        }
        else{
             //System.out.println("Hello world text link");
@@ -234,6 +241,49 @@ public class options extends javax.swing.JFrame {
     {
         this.Email = email;
         this.Password = password;
+    }
+    
+    public void Follow(WebDriver opn)
+    {
+        this.delay(2);
+        List<WebElement> list = new ArrayList<WebElement>();
+       list = opn.findElements(By.className("_1_KafmK5"));
+       List<WebElement> listAttr = new ArrayList<WebElement>();
+     
+       
+       for(int i = 0 ; i < list.size() ; i ++)
+       {
+           try
+           {
+                listAttr = list.get(i).findElements(By.tagName("path"));
+                if(listAttr.size() == 0)
+                {
+                    list.get(i).findElement(By.className("_1XMME7zz")).click();
+                    this.delay(1);
+                    opn.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);;
+                }
+           }catch(Exception e)
+           {
+               System.out.println("No Allowed");
+           }
+           this.delay(2);
+          /* 
+           try
+           {
+              if(list.get(i).isEnabled())
+              {
+                  list.get(i).click();
+              }          
+           }catch(Exception e)
+           {
+               System.out.println("No Allowed");
+           }
+           System.out.println("Tag Name "+list.get(i).getAttribute("class"));
+           this.delay(2);*/
+       }
+       
+       
+       
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
